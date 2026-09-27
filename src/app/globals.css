@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased font-sans;
+}
+
+/* Respect a business's brand color for star ratings / accents on the
+   public feedback page via a CSS variable set inline per-business. */
+.brand-bg {
+  background-color: var(--brand-color, theme('colors.brand.DEFAULT'));
+}
+.brand-text {
+  color: var(--brand-color, theme('colors.brand.DEFAULT'));
+}
+.brand-border {
+  border-color: var(--brand-color, theme('colors.brand.DEFAULT'));
+}
